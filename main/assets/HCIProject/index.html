@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>3020-A01-PTK</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="main-container">
+            <div id="notification-box">
+                <div id="notification-message"></div>
+            </div>
+            <!-- Navigation Menu -->
+            <div id="navigation-menu">
+                <button id="daily-data-button" class="navigation-menu-item">Input Daily Data</button>
+                <button id="goals-settings-button" class="navigation-menu-item">Goals & Settings</button>
+                <button id="view-history-button" class="navigation-menu-item">View History</button>
+            </div>
+            <!-- Daily Data Screen -->
+            <div id="daily-data" class="app-screen">
+                <div class="menu-bar">
+                    <button class="menu-bar-item menu-bar-left menu-button">☰ Menu</button>
+                    <div class="menu-bar-item menu-bar-center date-navigation">
+                        <button class="date-button date-back">&#x1F844;</button>
+                        <div class="date-display"></div>
+                        <button class="date-button date-forward">&#x1F846;</button>
+                    </div>
+                    <div class="menu-bar-item menu-bar-right" id="points-display"></div>
+                </div>
+                <div class="content-panel">
+                    <div class="primary-subpanel" id="food-grid-panel">
+                        <div class="food-grid-row" id="food-grid-headers">
+                            <div class="food-grid-item food-grid-header food-name">Food Groups</div>
+                            <div class="food-grid-item food-grid-header food-points">Points</div>
+                            <div class="food-grid-item food-grid-header food-servings">Servings</div>
+                        </div>
+                        <div class="food-grid-row">
+                            <div class="food-grid-item food-name">Fruits & Veggies</div>
+                            <div class="food-grid-item food-points">+3</div>
+                            <div class="food-grid-item food-servings">
+                                <button class="food-servings-button food-servings-minus">-</button>
+                                <input class="food-servings-input" data-food-group-name="Fruits & Veggies" value="0">
+                                <button class="food-servings-button food-servings-plus">+</button>
+                            </div>
+                        </div>
+                        <div class="food-grid-row">
+                            <div class="food-grid-item food-name">Whole Grains</div>
+                            <div class="food-grid-item food-points">+2</div>
+                            <div class="food-grid-item food-servings">
+                                <button class="food-servings-button food-servings-minus">-</button>
+                                <input class="food-servings-input" data-food-group-name="Whole Grains" value="0">
+                                <button class="food-servings-button food-servings-plus">+</button>
+                            </div>
+                            </div>
+                        <div class="food-grid-row">
+                            <div class="food-grid-item food-name">Protein</div>
+                            <div class="food-grid-item food-points">+1</div>
+                            <div class="food-grid-item food-servings">
+                                <button class="food-servings-button food-servings-minus">-</button>
+                                <input class="food-servings-input" data-food-group-name="Protein" value="0">
+                                <button class="food-servings-button food-servings-plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="primary-subpanel" id="weight-entry">
+                        Enter Daily Weight:
+                        <input id="weight-input" placeholder="Weight">
+                        lb.
+                    </div>
+                </div>
+            </div>
+            <!-- Goals and Settings Screen -->
+            <div id="goals-settings" class="app-screen">
+                <div class="menu-bar">
+                    <button class="menu-bar-item menu-bar-left menu-button">☰ Menu</button>
+                    <div class="menu-bar-item menu-bar-center"></div>
+                    <div class="menu-bar-item menu-bar-right"></div>
+                </div>
+                <div class="content-panel">
+                    <div class="primary-subpanel" id="settings-grid">
+                        <div class="settings-grid-item settings-label">Set new point goal:</div>
+                        <div class="settings-grid-item settings-entry">
+                            <input id="settings-point-goal-input" min="0" placeholder="Points to aim for">
+                            <button type="submit" class="settings-save-button" id="settings-point-goal-button">Set</button>
+                        </div>
+                        <div class="settings-grid-item settings-label">Set new weight goal:</div>
+                        <div class="settings-grid-item settings-entry">
+                            <input id="settings-weight-goal-input" min="0" placeholder="Weight to aim for (lb.)">
+                            <button type="submit" class="settings-save-button" id="settings-weight-goal-button">Set</button>
+                        </div>
+                        <div class="settings-grid-item settings-label">Add/update food group:</div>
+                        <div class="settings-grid-item settings-entry">
+                            <div class="settings-text-pair">
+                                <input id="settings-new-group-name" placeholder="Name of group">
+                                <input id="settings-new-group-points" placeholder="Points">
+                           </div>
+                            <button type="submit" class="settings-save-button" id="settings-new-group-button">Add</button>
+                        </div>
+                        <div class="settings-grid-item settings-label">Remove food group:</div>
+                        <div class="settings-grid-item settings-entry">
+                            <select id="settings-del-group-select">
+                            </select>
+                            <button type="submit" class="settings-save-button" id="settings-del-group-button">Remove</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- View History Screen -->
+            <div id="view-history" class="app-screen">
+                <div class="menu-bar">
+                    <button class="menu-bar-item menu-bar-left menu-button">☰ Menu</button>
+                    <div class="menu-bar-item menu-bar-center date-navigation">
+                        <button class="date-button date-back">&#x1F844;</button>
+                        <div class="date-display"></div>
+                        <button class="date-button date-forward">&#x1F846;</button>
+                    </div>
+                    <div class="menu-bar-item menu-bar-right" id="linegraph-scale-control">
+                        <button id="graph-scale-button-week" class="graph-scale-button">Last Week</button>
+                        <button id="graph-scale-button-month" class="graph-scale-button">Last Month</button>
+                        <button id="graph-scale-button-year" class="graph-scale-button">Last Year</button>
+                        <button id="graph-scale-button-all" class="graph-scale-button">Last 5 Years</button>
+                    </div>
+                </div>
+                <div class="content-panel">
+                    <div id="all-graphs-panel">
+                        <div class="primary-subpanel" id="linegraph-panel">
+                            <div id="linegraph-heading" class="graph-heading">Point & Weight History</div>
+                            <div class="linegraph-container">
+                                <div id="linegraph-graph"></div>
+                            </div>
+                            <div class="linegraph-legend">
+                                <div class="linegraph-legend-item" id="linegraph-legend-point-actual">Points</div>
+                                <div class="linegraph-legend-item" id="linegraph-legend-point-goal">Point Goal</div>
+                                <div class="linegraph-legend-item" id="linegraph-legend-weight-actual">Weight</div>
+                                <div class="linegraph-legend-item" id="linegraph-legend-weight-goal">Weight Goal</div>
+                            </div>
+                        </div>
+                        <div class="primary-subpanel" id="streak-panel">
+                            <div id="streak-heading" class="graph-heading">Point Goal Achievement History</div>
+                            <div id="streak-graph-container">
+                                <canvas id="streak-graph-canvas"></canvas>
+                            </div>
+                            <div id="streak-footer">
+                                <div id="streak-counter"></div>
+                                <div id="streak-legend">
+                                    <div id="streak-legend-title">Goal Achievement</div>
+                                    <div id="streak-legend-bar">✔</div>
+                                    <div id="streak-legend-caption">
+                                        <div class="streak-legend-tick">0%</div>
+                                        <div class="streak-legend-tick">100%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Scripts -->
+        <script src="jquery.min.js"></script>
+        <script src="jquery.flot.min.js"></script>
+        <script src="jquery.flot.axislabels.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

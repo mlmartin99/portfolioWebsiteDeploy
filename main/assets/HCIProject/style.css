@@ -1,0 +1,480 @@
+body {
+    background-color: white;
+    color: black;
+    font-family: Verdana, sans-serif;
+    font-size: large;
+    margin: 5px;
+    user-select: none;
+}
+
+input {
+    font-size: large;
+    font-family: Verdana, sans-serif;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    outline: none;
+}
+
+select {
+    font-size: large;
+    font-family: Verdana, sans-serif;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    outline: none;
+}
+
+button {
+    font-size: large;
+    font-family: Verdana, sans-serif;
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 5px;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+button:hover {
+    background-color: #D9D9D9;
+}
+
+button:active {
+    background-color: #919191;
+}
+
+#main-container {
+    position: relative;
+    max-width: 1000px;
+    min-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+
+.app-screen {
+    position: absolute;
+    z-index: 3;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.menu-bar {
+    display: grid;
+    grid-template-columns: 200px auto 200px;
+    height: 50px;
+    color: white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.menu-bar-item {
+    display: inline-grid;
+    background-color: #00B4E6;
+}
+
+.menu-bar-left {
+    border-radius: 5px 0 0 0;
+}
+
+.menu-bar-center {
+    background-color: #97D5E6;
+}
+
+.menu-bar-right {
+    border-radius: 0 5px 0 0;
+}
+
+.menu-button {
+    border: none;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.menu-button:hover {
+    background-color: #0082A6;
+}
+
+.menu-button:active {
+    background-color: #006A87;
+}
+
+#navigation-menu {
+    display: grid;
+    position: absolute;
+    z-index: 4;
+    top: 50px;
+    left: 0px;
+    width: 200px;
+}
+
+.navigation-menu-item {
+    background-color: #007BFF; 
+    color: white;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    border-radius: 0;
+}
+
+.navigation-menu-item:hover {
+    background-color: #003E80;
+}
+
+.navigation-menu-item:active {
+    background-color: #001F40;
+}
+
+#view-history-button {
+    border-radius: 0 0 5px 5px;
+}
+
+.date-navigation {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: black;
+}
+
+.date-button, .date-button:hover, .date-button:active {
+    background-color: transparent;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: xx-large;
+}
+
+.date-button:hover:enabled {
+    color: #D9D9D9;
+}
+
+.date-button:active:enabled {
+    color: #919191;
+}
+
+.date-button:disabled {
+    color:rgb(255, 255, 255, 0.6);
+    text-shadow: none;
+}
+
+.date-display {
+    font-size: xx-large;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#notification-box {
+    position: absolute;
+    z-index: 5;
+    padding: 5px;
+    top: -50px;
+    font-size: x-large;
+    right: 20px;
+    display: none;
+}
+
+#notification-message {
+    color: rgb(0, 0, 0, 0.5);
+}
+
+#notification-message.alert {
+    color: rgb(255, 0, 0, 0.5);
+}
+
+.content-panel {
+    background-color:#03A363;
+    border-radius: 0 0 5px 5px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.primary-subpanel {
+    background-color: #A8FFC2;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Daily Data Screen */
+
+#points-display {
+    display: grid;
+    grid-template-columns: 80% auto;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.points-display-item {
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 25px;
+}
+
+.points-display-achieved-text {
+    font-weight: bold;
+    color: #F5E427;
+}
+
+.points-display-achieved-icon {
+    color: #F5E427;
+}
+
+#food-grid-panel {
+    margin-bottom: 20px;
+}
+
+.food-grid-row {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    border-radius: 5px;
+}
+
+#food-grid-headers {
+    background-color: #0C401C;
+    color: white;
+}
+
+.food-grid-header.food-servings {
+    display: inline;
+    text-align: center;
+}
+
+.food-grid-header {
+    font-weight: bold;
+}
+
+.food-grid-row.row-odd {
+    background-color: #188037;
+    color: white;
+}
+
+.food-grid-item {
+    display: inline-grid;
+    padding: 8px;
+}
+
+.food-points {
+    text-align: center;
+}
+
+.food-servings {
+    display:grid;
+    grid-template-columns: 25px auto 25px;
+    text-align: center;
+}
+
+.food-servings-input {
+    margin-left: 5px;
+    margin-right: 5px;
+    min-width: 30px;
+    text-align: center;
+}
+
+.food-servings-button {
+    border-radius: 100%;
+}
+
+#weight-entry {
+    text-align: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#weight-input {
+    width: 70px;
+}
+
+/* Goals & Settings Screen */
+
+#settings-grid {
+    display: grid;
+    grid-template-columns: 40% 50%;
+}
+
+.settings-label {
+    font-weight: bold;
+}
+
+.settings-grid-item {
+    display: inline-grid;
+    padding: 16px 8px 16px;
+}
+
+.settings-entry {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-gap: 8px;
+}
+
+.settings-text-pair {
+    display: grid;
+    grid-template-columns:  70% 28%;
+    grid-gap: 2%;
+}
+
+.settings-save-button {
+    min-width: 82px;
+}
+
+/* View History Screen */
+
+#linegraph-scale-control {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.graph-scale-button {
+    font-size: x-small;
+    margin: 3px;
+    font-weight: bold;
+}
+
+#all-graphs-panel {
+    display: grid;
+    grid-template-columns: calc(50% - 10px) calc(50% - 10px);
+    grid-gap: 20px;
+}
+
+.graph-heading {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.linegraph-container {
+    background: white;
+	position: relative;
+	width: 100%;
+	height: 300px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#linegraph-graph {
+	position: absolute;
+	width: calc(100% - 20px);
+	height: calc(100% - 20px);
+	top: 10px;
+	left: 10px;
+    box-sizing: border-box;
+}
+
+.tickLabel {
+	font-size: 12px;
+    color: black;
+	font-family: sans-serif;
+}
+
+#tooltip {
+    background: #ffffff;
+	position: absolute;
+    z-index: 3;
+	display: none;
+	padding: 5px 10px;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.linegraph-legend {
+    white-space: nowrap;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.linegraph-legend-item {
+    background: #ffffff;
+	position: relative;
+	display: inline-block;
+	padding: 3px 5px 3px 15px;
+    font-size: small;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.linegraph-legend-item:before {
+	position: absolute;
+	display: block;
+	content: '';
+	width: 8px;
+	height: 8px;
+	top: calc(50% - 4px);
+	left: 4px;
+	border-radius: 5px;
+}
+
+#linegraph-legend-point-actual { border-bottom: 3px solid #30FF6E; }
+#linegraph-legend-point-goal { border-bottom: 3px solid #188037; }
+#linegraph-legend-weight-actual { border-bottom: 3px solid #00B4E6; }
+#linegraph-legend-weight-goal { border-bottom: 3px solid #005066; }
+
+#linegraph-legend-point-actual:before { background: #30FF6E; }
+#linegraph-legend-point-goal:before { background: #188037; }
+#linegraph-legend-weight-actual:before { background: #00B4E6; }
+#linegraph-legend-weight-goal:before { background: #005066; }
+
+#streak-graph-container {
+    height: 300px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#streak-graph-canvas {
+    width: 100%;
+    image-rendering: crisp-edges;
+}
+
+#streak-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+#streak-counter {
+    display: grid;
+    grid-template-columns: 140px auto;
+    font-size: smaller;
+}
+
+#streak-legend {
+    width: 120px;
+    text-align: center;
+}
+
+#streak-legend-title {
+    font-size: x-small;
+    font-weight: bold;
+}
+
+#streak-legend-bar {
+    background-image: linear-gradient(to right, rgba(12, 64, 28, 0), rgba(12, 64, 28, 1));
+    width: 100%;
+    height: 15px;
+    font-size: x-small;
+    text-align: right;
+    color: rgb(245, 228, 39)
+}
+
+#streak-legend-caption {
+    display: flex;
+    justify-content: space-between;
+}
+
+.streak-legend-tick {
+    font-size: xx-small;
+}
+
+.streak-label {
+    font-weight: bold;
+}

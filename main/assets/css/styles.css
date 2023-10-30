@@ -1,0 +1,458 @@
+
+
+  
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+  
+  /* Variables */
+  :root {
+    --font-family: "Roboto", sans-serf;
+    --normal-font: 400;
+    --bold-font: 700;
+    --bolder-font: 900;
+    --bg-color: #494D5F;
+    --primary-color: #E5EAF5;
+    --secondary-color: #D0BDF4;
+    --primary-shadow: #000000;
+    --secondary-shadow: #845BB3;
+    --bottom-margin: 0.5rem;
+    --bottom-margin-2: 1rem;
+    --line-height: 1.7rem;
+    --transition: 0.3s;
+  }
+  /* Variables end */
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+
+  
+  /* CSS Resets */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  a {
+    text-decoration: none;
+    font-size: small;
+    color: var(--secondary-shadow);
+  }
+  
+  a:hover {
+    color: var(--secondary-color);
+  }
+  
+  body {
+    font-family: var(--font-family);
+  }
+
+  
+  nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav h1 {
+    color: var(--primary-color);
+  }
+
+  nav h2 {
+    color: var(--secondary-color);
+    font-size: x-large;
+  }
+  
+  nav a {
+    color: var(--primary-color);
+    transition: var(--transition);
+  }
+  nav a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 1.9rem;
+  }
+  
+  nav ul li {
+    font-weight: var(--bold-font);
+  }
+
+  .burger-menu {
+    color: var(--primary-color);
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+  }
+
+  .about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+    gap: 2.5rem;
+    max-width: 68.75rem;
+    margin: auto;
+  }
+
+  .about img {
+    height: 30rem;
+    width: 22.5rem;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+  }
+  
+  .bio {
+    width: 25rem;
+    padding: 0.625rem;
+    border-radius: 2px;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+  }
+  
+  .bio h1 {
+    margin-bottom: var(--bottom-margin);
+  }
+
+  
+  .bio p {
+    line-height: var(--line-height);
+    padding: 0.3rem 0;
+  }
+
+  .projects {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    padding: 32px 0;
+    margin-top: 2rem;
+  }
+  
+  .project-pic {
+    width: 128px;
+    height: 150px;
+  }
+
+  .project-pic-wide {
+    height: 128px;
+    width: 150px;
+  }
+  
+  .projects-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+  }
+
+  .projects-title {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .projects-subtitle {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .project-container {
+    text-align: center;
+    width: 21.875rem;
+    padding: 1rem;
+  }
+
+  .project-container p {
+    padding: 0.4rem;
+  }
+  
+  .project-title {
+    margin-bottom: var(--bottom-margin);
+    color: var(--bg-color);
+  }
+  
+  .project-details {
+    margin-bottom: var(--bottom-margin);
+    color: var(--bg-color);
+  }
+  
+  .project-card {
+    background-color: var(--primary-color);
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .resume {
+    background-color: var(--bg-color);
+    padding: 32px 0;
+    margin-top: 2rem;
+  }
+  
+  .resume-pic {
+    width: 85%;
+    height: 90%;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+  }
+  
+  .resume-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+  }
+
+  .resume-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+
+  .resume-card {
+    background-color: var(--bg-color);
+    border-radius: 28px;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 68.75rem;
+    margin: auto;
+    background-color: var(--bg-color);
+  }
+  
+  .contact-form-container h2 {
+    text-align: center;
+    margin-bottom: var(--bottom-margin-2);
+    color: var(--bg-color);
+  }
+  
+  .contact-form-container {
+    max-width: 37rem;
+    margin: 0 auto;
+    padding: 0.938rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+    background-color:var(--secondary-color);
+  }
+
+  .contact-form-container label {
+    line-height: 2.7em;
+    font-weight: var(--bold-font);
+    color: var(--bg-color);
+  }
+  
+  .contact-form-container textarea {
+    min-height: 6.25rem;
+    font-size: 14px;
+  }
+  
+  .contact-form-container .input-field {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    border: 2px outset var(--primary-color);
+    font-size: 0.875rem;
+    outline: none;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: var(--bold-font);
+    transition: var(--transition);
+  }
+
+  .contact img{
+    height: 30rem;
+    width: 22.5rem;
+  }
+
+  .skills-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+
+
+  /* .socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    right: 1%;
+    bottom: 10%;
+  } */
+
+  .soc-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+  }
+
+  .soc-card {
+    background-color: var(--primary-color);
+    border-radius: 28px;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  .socicon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  footer {
+    background-color: var(--bg-color);
+    padding: 1.25rem;
+    text-align: center;
+    margin: 2rem 0 0;
+  }
+
+  .scroll-up {
+    position: fixed;
+    right: 2.25%;
+    bottom: 1%;
+    cursor: pointer;
+  }
+  
+  .up-arrow {
+    width: 3rem;
+    height: 3rem;
+  }
+
+
+  @media screen and (max-width: 720px) {
+    /*changes reflects on screen with a width of 720px and below*/
+
+    nav {
+      padding: 1.5rem 1rem;
+    }
+
+    nav ul {
+      position: fixed;
+      background-color: var(--bg-color);
+      flex-direction: column;
+      top: 86px;
+      left: 10%;
+      width: 80%;
+      text-align: center;
+      transform: translateX(120%);
+      transition: transform 0.5s ease-in;
+    }
+  
+     nav ul li {
+      margin: 8px;
+    }
+
+    .burger-menu {
+      display: block;
+    }
+  
+    nav ul.show {
+      transform: translateX(0);
+    }
+
+    .about {
+      margin-top: -4rem;
+      flex-direction: column;
+      gap: 0;
+    }
+  
+  .about img {
+      height: 30rem;
+      width: 23rem;
+    }
+  
+    .bio {
+      margin-top: 1rem;
+      width: 20.5rem;
+    }
+
+    .projects-container {
+      flex-direction: column;
+    }
+  
+    .project-container {
+      width: 20.875rem;
+    }
+
+    .project-link {
+      color: var(--secondary-shadow);
+    }
+
+    .contact img {
+      height: 20rem;
+      width: 15rem;
+   }
+
+    .contact-form-container {
+      margin-top: 1rem;
+      width: 20.5rem;
+    }
+
+    .contact {
+      flex-direction: column;
+    }
+
+
+  }
+
+  @media screen and (max-width: 420px) {
+    .about img {
+      height: 28rem;
+      width: 21rem;
+    }
+  
+    .bio {
+      width: 18.3rem;
+    }
+  
+    .project-container {
+      width: 17.875rem;
+    }
+  
+    .contact-form-container {
+      max-width: 17.75rem;
+    }
+
+    .up-arrow {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .resume-pic{
+      zoom: 0.75; 
+      -moz-transform: scale(0.75); 
+      -moz-transform-origin: 0 0;
+    }
+  } 

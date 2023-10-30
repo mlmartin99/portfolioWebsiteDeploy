@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--CSS Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32x32.png"
+    />
+
+    <!-- Animate CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Melissa Martin | Computer Engineer In Training</title>
+  </head>
+
+  <body bgcolor="#494D5F">
+    <nav>
+        <h1>MELISSA MARTIN</h1>
+        <h2>Computer Engineer</h2>
+        <ul class="navigation">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#resume" class="nav-link">Resume</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#socials" class="nav-link">Socials</a></li>
+        </ul>
+        <button class="burger-menu" id="burger-menu">
+          <ion-icon class="bars" name="menu-outline"></ion-icon>
+        </button>
+  </nav>
+
+  <section class="about" id="about">
+    <img
+      src="assets/images/resumepic.jpg"
+      alt="headshot"
+      loading="lazy"
+      class="headshot-img"
+    />
+
+    <div class="bio animate__animated animate__shakeX">
+      <h2 class="bio-title">About Me</h2>
+        <p class="bio-text">
+            I recently graduated Computer Engineering at the University of Manitoba in May 2023. I have
+            over 2 years of engineering experience in the hydro electric industry. I have worked in 
+            hydroelectric consulting, distribution engineering, and generation modelling, applying my
+            computer engineering skills to configure RTUs, aggregate power quality data, perform power system studies,
+            maintain and improve linear optimization modelling processes, and more. My strengths are parallel
+            and distributed processing and embedded systems in C or Python.
+            </p>
+            <p>
+            I have focused my extracurricular projects towards embedded systems design, including holding a software 
+            position on the UMSAE Polar Bear Racing Electric team throughout university and completing small personal projects utilizing STM32 and 
+            Arduino development boards. I have also increased my web development skills through creating this 
+            website and programming JavaScript web games. 
+          </p>
+          <p>        
+            In my spare time I volunteer at the Winnipeg Humane 
+            Society as a dog walker. I like to get active and get outside daily. On the weekends you can find 
+            hiking, biking, strolling with my dog, reading, or working on a programming
+            project, and spending as much time as possible
+            with loved ones and friends. I love trying new things and pick up new skills quickly!
+            </p>
+            <p>
+            This website showcases some of my programming skills and projects. You can find my resume and a contact form
+            near the bottom of the page. Check out my Linked and GitHub, too, by clicking the
+            icons.
+        </p>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <h2 class="skills-title">Skills</h2>
+        <div class="soc-container">
+          <div class="soc-container soc-card">
+            <a
+            ><img
+              src="assets/icons/icons8-c-programming.svg"
+              alt="C"
+              loading="lazy"
+              class="socicon"
+            /></a>
+            <a 
+              ><img 
+              src="assets/icons/icons8-java.svg" 
+              alt="Java" 
+              class="socicon"
+            /></a>
+            <a 
+            ><img 
+              src="assets/icons/icons8-python.svg" 
+              alt="Python" 
+              class="socicon"
+            /></a>
+            <a 
+            ><img 
+              src="assets/icons/icons8-javascript.svg" 
+              alt="JS" 
+              class="socicon"
+            /></a>
+            <a 
+            ><img 
+              src="assets/icons/icons8-html-5.svg" 
+              alt="HTML5" 
+              class="socicon"
+            /></a>
+            <a 
+            ><img 
+              src="assets/icons/icons8-css3.svg" 
+              alt="CSS3" 
+              class="socicon"
+            /></a>
+          </div>  
+      </div>
+    </section>
+
+
+    <section class="projects" id="projects">
+      <h2 class="projects-title">Projects</h2>
+      <div class="projects-container">
+        <div class="project-container project-card">
+          <img
+            src="assets/images/atrium-ball.jpeg"
+            alt="capstone"
+            loading="lazy"
+            class="project-pic-wide"
+          />
+          <img
+          src="assets/images/atrium-collecting.jpeg"
+          alt="capstone2"
+          loading="lazy"
+          class="project-pic-wide"
+          />
+          <h4 class="project-title">Design and Implementation of an Autonomous Tennis Ball Collecting Robot</h4>
+          <p class="project-details">
+            This was my undergraduate Capstone project, completed in a team with 6 other individuals. We successfully created a robot
+            that could collect and detect tennis balls in a 10x10 meter area (about half of a tennis court) when commanded.
+            It stored the tennis balls onboard the robot and return to a home base position once all tennis balls were collected.
+            The robot used an OpenCV camera and neural network for tennis ball detection, and a greedy path planning
+            algorithm. The camera feed along with detection boxes were streamed over WiFi to a user interface.
+             It successfully collected 5 tennis balls in the designated area in under 5 minutes.
+          </p>
+          <p class="project-details">
+            My responsibility for the project was the robot drivetrain. I sourced parts, constructed the chassis,
+            configured the onboard electronics, and programmed the drivetrain. The programming included interfacing
+            with the motor control to drive and steer the robot and reading from the motor encoders using an STM32. I also
+            implemented the motor control interface to the path planning module with a ROS UART Bridge and Docker. I aided
+            in the integration of the entire ROS project. The link below is to a public repository on my GitHub. The folders 
+            in the repository are extracted from a private GitHub organization page, and I have only included portions that
+            I was a main contributor on. 
+          </p>
+          <a href="https://github.com/mlmartin99/CapstoneFinal" target="_blank" class="project-link">Check it Out</a>
+        </div>
+        <div class="project-container project-card">
+          <img
+            src="assets/images/curling_project.png"
+            alt="curling-device"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h4 class="project-title">Hard of Hearing Curling Communication Device</h4>
+          <p class="project-details">
+            This embedded systems group project was completed for a Digital Design Systems course and aimed to aid hard of hearing
+            curlers with communication between the skip and the sweepers. The project involved the 
+            completion of a a functional prototype, using ESP32s, and a physical prototype through 3D
+            printed TinkerCAD files. Our design solution used one-way WiFi communication (ESP-NOW) to 
+            send instructions from the skip to the sweepers. The skip issued commands by providing pushbutton input 
+            on a remote control device. The sweepers received the instructions via LEDs on a device fastened 
+            to their broom. Our design solution also featured sleep/wake cycles for power saving. My portion
+            of the project was the receiving (sweeper) device functional prototype and sending (skip) device
+            physical prototype. All code for the project was written in C using the Arduino IDE.
+          </p>
+        </div>
+
+      <div class="projects-container">
+        <div class="project-container project-card">
+          <img
+            src="assets/images/UselessBox.png"
+            alt="useless-box"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h4 class="project-title">Useless Box</h4>
+          <p class="project-details">
+            My boyfriend and I created this fun, multi-disciplinary, 3D printing and embedded systems project over winter
+            break in 2021/22. I completed the majority of the code and circuitry, while he completed much of
+            the box design and 3D printing. We did, however, take the opportunity to complete the project as team, and 
+            I learned a little about Mechanical design and 3D printing, while he practiced some basic coding.
+            The basic function of the useless box is to turn the switch into the OFF position using an Arduino and Servo
+            motor when the user moves the switch into the ON position. I implemented this functionality using interrupt-driven
+            C-style Arduino programming, and additionally added an 8x8 LED matrix to display a happy or sad face when the
+            switch is in the OFF and ON state, respectively. Take a look at the program on my GitHub by clicking the link below!
+          </p>
+          <a href="https://github.com/mlmartin99/UselessBox" target="_blank" class="project-link">Check it Out</a>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="resume" id="resume">
+      <h2 class="resume-title">Resume</h2>
+      <div class="resumes-container">
+        <div class="resume-container resume-card">
+          <iframe
+            src="assets/resume/MelissaMartinResume_General.pdf"
+            alt="resume_doc"
+            loading="lazy"
+            class="resume-pic"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      
+      <div class="contact-form-container">
+        <h2>Contact Me</h2>
+        <div class="contact-form">
+          <form action="https://formspree.io/f/mgeqelal" method="POST">
+            <div class="form-control">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="sender-name"
+                placeholder="Enter Your Name"
+                class="input-field"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="sender-email"
+                placeholder="Enter Your Email"
+                class="input-field"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="sender-subject"
+                placeholder="Subject"
+                class="input-field"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                cols="60"
+                rows="10"
+                placeholder="Enter Your Message"
+                name="message"
+                class="input-field"
+                required
+              ></textarea>
+            </div>
+            <input
+              type="submit"
+              value="Submit"
+              id="submit-btn"
+              class="submit-btn"
+            />
+          </form>
+        </div>
+      </div>
+
+      <img
+        src="assets/images/LightTheNight.jpg"
+        alt="contact-img"
+        loading="lazy"
+        class="float-img"
+      />
+
+    </section>
+
+    <section class="socials" id="socials">
+      <h2 class="skills-title">Socials</h2>
+        <div class="soc-container">
+          <div class="soc-container soc-card">
+            <a href="https://ca.linkedin.com/in/melissa-martin-b773801a0?trk=public_profile_browsemap" target="_blank"
+            ><img
+            src="assets/icons/icons8-linkedin-circled.svg"
+              alt="Linkedin"
+              loading="lazy"
+              class="socicon"
+            /></a>
+            <a href="https://github.com/mlmartin99" target="_blank"
+              ><img 
+                src="assets/icons/icons8-github.svg" 
+                alt="Github" 
+                class="socicon"
+            /></a>
+          </div>  
+      </div>
+    </section>
+
+    <!-- Skills and social icons fixed on right hand side of screen-->
+    <!-- <div class="socials">
+      <h2>Skills</h2> 
+      <a
+        ><img
+          src="assets/icons/icons8-c-programming.svg"
+          alt="C"
+          loading="lazy"
+          class="socicon"
+      /></a>
+      <a 
+        ><img 
+          src="assets/icons/icons8-java.svg" 
+          alt="Java" 
+          class="socicon"
+      /></a>
+      <a 
+      ><img 
+        src="assets/icons/icons8-python.svg" 
+        alt="Python" 
+        class="socicon"
+    /></a>
+    <a 
+    ><img 
+      src="assets/icons/icons8-javascript.svg" 
+      alt="JS" 
+      class="socicon"
+    /></a>
+    <a 
+    ><img 
+      src="assets/icons/icons8-html-5.svg" 
+      alt="HTML5" 
+      class="socicon"
+    /></a>
+    <a 
+    ><img 
+      src="assets/icons/icons8-css3.svg" 
+      alt="CSS3" 
+      class="socicon"
+    /></a> -->
+    <!-- <h2>Socials</h2> 
+    <a href="https://ca.linkedin.com/in/melissa-martin-b773801a0?trk=public_profile_browsemap" target="_blank"
+      ><img
+      src="assets/icons/icons8-linkedin-circled.svg"
+        alt="Linkedin"
+        loading="lazy"
+        class="socicon"
+    /></a>
+    <a href="https://github.com/mlmartin99" target="_blank"
+      ><img 
+        src="assets/icons/icons8-github.svg" 
+        alt="Github" 
+        class="socicon"
+    /></a>
+    </div> -->
+    <section class="scroll-up-sec">
+      <i class="scroll-up" id="scroll-up"
+      ><img
+        src="assets/icons/up-arrow.svg"
+        class="socicon up-arrow"
+        alt="scroll-up"
+      /></i>
+    </section>
+
+    <footer>
+      <p class="copy">&copy; Copyright 2022</p>
+      <p class="copy">
+        Built with &#x2661; by Melissa Martin
+      </p>
+    </footer>
+
+    <!-- Website scripts -->
+    <script src="assets/js/app.js"></script>
+
+    <!-- Ion icons scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyCNGGflWtbYITF16diS_Sv-jfGPbnDOHK0",
+        authDomain: "melissamartinportfolio.firebaseapp.com",
+        projectId: "melissamartinportfolio",
+        storageBucket: "melissamartinportfolio.appspot.com",
+        messagingSenderId: "1033888091560",
+        appId: "1:1033888091560:web:829d15b70d7d2b9d8c219d",
+        measurementId: "G-5H2B57FP7G"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+  </body>
+</html>
