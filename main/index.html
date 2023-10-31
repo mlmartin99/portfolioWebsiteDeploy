@@ -167,7 +167,10 @@
           </p>
           <a href="https://github.com/mlmartin99/CapstoneFinal" target="_blank" class="project-link">Check it Out</a>
         </div>
-        <div class="project-container project-card">
+
+
+          
+          <div class="project-container project-card">
           <img
             src="assets/images/curling_project.png"
             alt="curling-device"
@@ -208,6 +211,31 @@
             switch is in the OFF and ON state, respectively. Take a look at the program on my GitHub by clicking the link below!
           </p>
           <a href="https://github.com/mlmartin99/UselessBox" target="_blank" class="project-link">Check it Out</a>
+        </div>
+
+      
+      <div class="projects-container">
+        <div class="project-container project-card">
+          <h4 class="project-title">SPI CAN Communication</h4>
+          <img
+          src="assets/images/spi_can_schematic.png"
+          alt="spi_can_pic"
+          loading="lazy"
+          class="project-pic-wide"
+          />
+                      <p class="project-details">
+            I developed code for CAN communication via SPI on an STM32F4 board, using an MCP2515 CAN controller with SPI interface and an MCP2551 CAN transceiver. 
+            The blinky code example is linked below. This code was developed for the U of M SAE formula electric team. The introduction of CAN communication using the 
+            SPI pins on the STM32 board allows for introduction of a 3rd CAN bus to the racecar. This enables large car improvement projects, such as the 
+            introduction of a custom dual motor controller.
+            </p>
+            <p class="project-details">
+              The specific blinky example code linked below has both sending and receiving sections. The sending STM32 toggles the state of an LED connected to the board
+              and transmits the state of the LED to the receiving STM32 via the SPI CAN protocol. The receiving STM32 sets the state of it's own attached LED to 
+              match the sending board's LED. The code utilizes an open source MCP2515 module.
+              </p>
+          </p>
+          <a href="https://github.com/mlmartin99/SPI_CAN_Blinky" target="_blank" class="project-link">Check it Out</a>
         </div>
 
       <div class="projects-container">
@@ -415,6 +443,28 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
 
-
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyCNGGflWtbYITF16diS_Sv-jfGPbnDOHK0",
+        authDomain: "melissamartinportfolio.firebaseapp.com",
+        projectId: "melissamartinportfolio",
+        storageBucket: "melissamartinportfolio.appspot.com",
+        messagingSenderId: "1033888091560",
+        appId: "1:1033888091560:web:829d15b70d7d2b9d8c219d",
+        measurementId: "G-5H2B57FP7G"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
   </body>
 </html>
