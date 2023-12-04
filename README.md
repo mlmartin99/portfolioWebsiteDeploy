@@ -1,2 +1,2 @@
 # Personal Portfolio
-Click [here](melissalmartin.ca) to go to my developer portfolio. 
+Click [here](https://melissalmartin.ca) to go to my developer portfolio. 
